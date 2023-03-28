@@ -2,6 +2,8 @@
 SELECT *
 FROM `students`
 WHERE YEAR(`date_of_birth`) = 1990;
+-- per ordinarli in ordine crescente
+ORDER BY `cfu` ASC;
 -- ****************
 
 
@@ -35,16 +37,11 @@ WHERE hour(`hour`) >= 14 && `date` = '2020-06-20';
 
 
 
-
-
 -- 6. Selezionare tutti i corsi di laurea magistrale (38)
 SELECT `name` 
 FROM `degrees`
 WHERE `name` like '%magistrale%';
 -- ****************
-
-
-
 
 
 
@@ -57,7 +54,7 @@ FROM `departments`;
 -- 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 SELECT count(*)
 FROM `teachers`
-WHERE `phone` IS NOT null;
+WHERE `phone` IS null;
 -- ****************
 
 
